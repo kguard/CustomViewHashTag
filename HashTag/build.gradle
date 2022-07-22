@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -26,6 +27,26 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+}
+afterEvaluate {
+    publishing{
+        publications{
+            release(MavenPublication){
+                from components.release
+                groupId = 'com.example.hashtag'
+                artifactId = 'HashTag'
+                version = '1.2'
+            }
+
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+                groupId = 'com.example.hashtag'
+                artifactId = 'HashTag'
+                version = '1.2'
+            }
+        }
     }
 }
 
