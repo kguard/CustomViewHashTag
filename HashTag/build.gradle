@@ -34,7 +34,7 @@ afterEvaluate {
         publications{
             release(MavenPublication){
                 from components.release
-                groupId = 'com.example.hashtag'
+                groupId = 'com.github.kgaurd'
                 artifactId = 'HashTag'
                 version = '1.2'
             }
@@ -42,7 +42,7 @@ afterEvaluate {
             debug(MavenPublication) {
                 // Applies the component for the debug build variant.
                 from components.debug
-                groupId = 'com.example.hashtag'
+                groupId = 'com.github.kgaurd'
                 artifactId = 'HashTag'
                 version = '1.2'
             }
