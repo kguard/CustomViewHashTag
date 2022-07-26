@@ -36,7 +36,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.kgaurd'
                 artifactId = 'HashTag'
-                version = '1.6'
+                version = '1.7'
             }
 
             debug(MavenPublication) {
@@ -44,7 +44,7 @@ afterEvaluate {
                 from components.debug
                 groupId = 'com.github.kgaurd'
                 artifactId = 'HashTag'
-                version = '1.6'
+                version = '1.7'
             }
         }
     }
