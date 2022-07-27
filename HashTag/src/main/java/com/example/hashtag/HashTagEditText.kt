@@ -10,6 +10,7 @@ import android.text.style.UnderlineSpan
 import android.util.AttributeSet
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.widget.addTextChangedListener
 import java.util.regex.Pattern
 
 class HashTagEditText(context: Context, attrs: AttributeSet?) : AppCompatEditText(context,attrs)
@@ -32,6 +33,9 @@ class HashTagEditText(context: Context, attrs: AttributeSet?) : AppCompatEditTex
     }
     fun HashTag(color:Int){
         val hashtag="^#\\S*"
+        this.addTextChangedListener{
+            //afterTextChange
+        }
         this@HashTagEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
